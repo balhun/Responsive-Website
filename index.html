@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gripen</title>
+    <style>
+        body { background-color: lightblue; }
+        #container { 
+            width: 95%;
+            padding: 5px;
+            margin: auto;
+        }
+        .block {
+            background-color: white;
+            border: 1px solid lightgray;
+            padding: 5px;
+            margin-bottom: 10px;
+        }
+        h2 { margin: 5px; }
+        img { width: 100%; height: auto;}
+        .jobb { display: none;}
+
+        .sor { display: flex;}
+
+        @media (min-width: 700px) {
+            #container { display: flex;}
+            .block { float: left; }
+            .bal, .kozep {
+                width: 50%; margin: 5px;
+            }
+        }
+
+        @media (min-width: 1400px) {
+            .jobb { display: block; }
+            .bal, .kozep, .jobb {
+                width: 33%; margin: 5px;
+            }
+            .jobb img {
+                object-fit: contain; 
+                width: 48%; height: auto;
+                margin: 5px;
+            }
+        }
+    </style>
+    <script>
+        function onResize() {
+            document.querySelector("title").innerHTML = "Gripen (" + document.documentElement.clientWidth + " px)";
+        }
+    </script>
+</head>
+<body onresize="onResize();" onload="onResize();">
+    <div id="container">
+            <div class="bal block">
+                <h2>Fegyverek</h2>
+                <div>
+                    <img src="Gripen_E-Meteor_-_2.jpg">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae sit omnis ratione. Eum atque nam excepturi officiis odit, facilis blanditiis perspiciatis tempore non eos aut mollitia beatae eligendi modi porro? Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae sit omnis ratione. Eum atque nam excepturi officiis odit, facilis blanditiis perspiciatis tempore non eos aut mollitia beatae eligendi modi porro?</p>
+                </div>
+                <div>
+                    <img src="Gripen_E-1561.jpg">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae sit omnis ratione. Eum atque nam excepturi officiis odit, facilis blanditiis perspiciatis tempore non eos aut mollitia beatae eligendi modi porro? Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae sit omnis ratione. Eum atque nam excepturi officiis odit, facilis blanditiis perspiciatis tempore non eos aut mollitia beatae eligendi modi porro?</p>
+                </div>
+            </div>
+            <div class="kozep block">
+                <h2>Magyar</h2>
+                <div>
+                    <img src="Lion_Effort_2012.jpg">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae sit omnis ratione. Eum atque nam excepturi officiis odit, facilis blanditiis perspiciatis tempore non eos aut mollitia beatae eligendi modi porro? Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae sit omnis ratione. Eum atque nam excepturi officiis odit, facilis blanditiis perspiciatis tempore non eos aut mollitia beatae eligendi modi porro?</p>
+                </div>
+                <div>
+                    <img src="Gripen-HUN.jpg">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae sit omnis ratione. Eum atque nam excepturi officiis odit, facilis blanditiis perspiciatis tempore non eos aut mollitia beatae eligendi modi porro? Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae sit omnis ratione. Eum atque nam excepturi officiis odit, facilis blanditiis perspiciatis tempore non eos aut mollitia beatae eligendi modi porro?</p>
+                </div>
+            </div>
+            <div class="jobb block">
+                <h2>Gripen-E</h2>
+                <div class="sor">
+                    <img src="Gripen_E-1067.jpg">
+                    <img src="Gripen_E-1561.jpg">
+                </div>
+                <div class="sor">
+                    <img src="Gripen_E-1849.jpg">
+                    <img src="Gripen_E-Meteor_-_2.jpg">
+                </div>
+                <div class="sor">
+                    <img src="Gripen_E_-_4_ship-2001.jpg">
+                    <img src="Gripen_E_6002_DSC0510.jpg">
+                </div>
+                <div class="sor">
+                    <img src="Gripen_E_0071.jpg">
+                    <img src="Gripen_E_-_4_ship-2556.jpg">
+                </div>
+                <div class="sor">
+                    <img src="Gripen-HUN.jpg">
+                    <img src="AIrtoAir_231107_ERK2064.jpg">
+                </div>
+            </div>  
+    </div>
+</body>
+</html>
